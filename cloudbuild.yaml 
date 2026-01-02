@@ -1,14 +1,14 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/$PROJECT_ID/my-app', '.']
+  args: ['build', '-t', 'gcr.io/$PROJECT_ID/gcpcloud', '.']
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/$PROJECT_ID/my-app']
+  args: ['push', 'gcr.io/$PROJECT_ID/gcpcloud]
 - name: 'gcr.io/google.com/cloudsdktool/gcloud'
   args:
   - 'run'
   - 'deploy'
-  - 'my-app'
-  - '--image=gcr.io/$PROJECT_ID/my-app'
+  - 'gcpcloud'
+  - '--image=gcr.io/$PROJECT_ID/gcpcloud'
   - '--region=us-central1'
   - '--platform=managed'
   - '--allow-unauthenticated'

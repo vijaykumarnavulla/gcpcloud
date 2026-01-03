@@ -1,6 +1,6 @@
 FROM node:18
 
-WORKDIR /app
+WORKDIR /gcpcloud
 
 # Copy only package files first
 COPY package*.json ./

@@ -7,7 +7,7 @@ app.use(express.json());
 
 // Health check endpoint (Cloud Run requires / endpoint)
 app.get('/', (req, res) => {
-  res.status(200).send('Hello from Cloud Run! 🚀');
+  res.status(200).send('Hello from Cloud Run! 🚀  LLOYDS' );
 });
 
 // Example API endpoint
